@@ -10,8 +10,9 @@
         $dbUsername = "root";
         $dbPassword = "";
         $dbname = "accounts";
+        $portnumber = "3308";
 
-        $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
+        $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname, $portnumber);
 
         if(mysqli_connect_error()){
             die('Connect Error('.mysqli_connect_errno().')'.mysqli_connect_error());
@@ -43,6 +44,4 @@
         echo "All fields are required";
         die();
     }
-
-
 ?>
